@@ -3,11 +3,11 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     queryInterface.addConstraint('Products',{
-      fields: ['userId'],
+      fields: ['categoryId'],
       type: 'foreign key',
-      name: 'user-products-association',
+      name: 'products-category-association',
       references:{
-        table:'Users',
+        table:'Categories',
         field:'id',
       }
     });
@@ -15,17 +15,17 @@ module.exports = {
      * Add altering commands here.
      *
      * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
+     * await queryInterface.createTable('Category', { id: Sequelize.INTEGER });
      */
   },
 
   async down (queryInterface, Sequelize) {
     queryInterface.removeConstraint('Products',{
-      fields: ['userId'],
+      fields: ['categoryId'],
       type: 'foreign key',
-      name: 'user-products-association',
+      name: 'products-category-association',
       references:{
-        table:'Users',
+        table:'Categories',
         field:'id',
       }
     });

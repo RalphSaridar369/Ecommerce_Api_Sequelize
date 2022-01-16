@@ -1,7 +1,7 @@
 const model = require("../models");
 
-const postAction = async (modelName, req, res) => {
-    await model[modelName].create(req.body)
+const postAction = async (modelName, body, res) => {
+    await model[modelName].create(body)
         .then((result) => {
             res
                 .status(200)

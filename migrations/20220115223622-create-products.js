@@ -11,6 +11,7 @@ module.exports = {
       name: {
         allowNull: false,
         type: Sequelize.STRING,
+        unique:true
       },
       price: {
         allowNull: false,

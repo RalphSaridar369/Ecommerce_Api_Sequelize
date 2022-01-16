@@ -9,10 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        allowNull: false,
+        type: Sequelize.STRING,
       },
       price: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
@@ -23,10 +25,12 @@ module.exports = {
         type: Sequelize.DATE
       },
       userId:{
-        type: Sequelize.INTEGER
+        // allowNull: false,
+        type: Sequelize.INTEGER,
       },
       categoryId:{
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
       }
     });
   },
